@@ -50,8 +50,20 @@ public class GetBookByIdQueryHandler : IRequestHandler<GetBookByIdQuery, BookDet
 
     public async Task<BookDetailDto?> Handle(GetBookByIdQuery request, CancellationToken cancellationToken)
     {
-        // TODO (Robledo): implementar la consulta por Id descrita arriba.
-        await Task.CompletedTask;
-        throw new NotImplementedException("TODO Robledo: implementar Query 2 - Consultar un libro por ID.");
+        return await _context.Books
+            .AsNoTracking()
+            .Where(b => b.Id == request.Id)
+            .Select(b => new BookDetailDto
+            {
+                Id = b.Id,
+                Title = b.Title,
+                Isbn = b.Isbn,
+                PublicationYear = b.PublicationYear,
+                AuthorId = b.AuthorId,
+                Author = b.Author!.FullName,
+                CategoryId = b.CategoryId,
+                Category = b.Category!.Name
+            })
+            .FirstOrDefaultAsync(cancellationToken);
     }
 }
