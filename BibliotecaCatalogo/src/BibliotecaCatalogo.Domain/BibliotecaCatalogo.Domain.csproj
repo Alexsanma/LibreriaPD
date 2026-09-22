@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BibliotecaCatalogo.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <!--
+    CAPA DE DOMINIO (Clean Architecture - núcleo).
+    Regla de dependencias: NO referencia a ninguna otra capa ni a EF Core.
+    Solo contiene entidades, objetos de valor y reglas del negocio.
+  -->
+
+</Project>

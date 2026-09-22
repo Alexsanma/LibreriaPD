@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>BibliotecaCatalogo.Application</RootNamespace>
+  </PropertyGroup>
+
+  <!--
+    CAPA DE APLICACIÓN (Clean Architecture).
+    Orquesta los casos de uso (CQRS con MediatR).
+    Depende SOLO de Domain. No conoce la implementación concreta de la base de datos
+    (usa la abstracción IApplicationDbContext).
+  -->
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaCatalogo.Domain\BibliotecaCatalogo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
