@@ -41,11 +41,11 @@ public async Task<BookDetailDto?> Handle(GetBookByIdQuery request, CancellationT
 ```
 
 ## Cómo probar
-1. `git checkout -b feature/query2-robledo`
+1. `git pull` para partir de la última versión de `main`.
 2. Implementa y ejecuta la API.
 3. En Swagger: `GET /api/books/5` → *Clean Code*; `GET /api/books/999` → **404**.
 4. Commit y push:
    ```bash
    git commit -am "feat(books): Query 2 - consultar libro por ID"
-   git push -u origin feature/query2-robledo
+   git push
    ```

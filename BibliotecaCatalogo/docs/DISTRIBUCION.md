@@ -7,12 +7,12 @@ pisarse) pero que todos trabajen sobre la **misma base** de Clean Architecture +
 
 ## Resumen
 
-| Integrante | Parte | Archivos que le corresponden | Rama sugerida |
-|-----------|-------|------------------------------|---------------|
-| **Alexander** | Base compartida + integración | `Domain/*`, `Infrastructure/*`, `Application/Common/*`, `WebApi/*`, migración inicial | `main` / `chore/base` |
-| **Sara** | Query 1 – Consultar todos los libros | `Application/Books/Queries/GetAllBooks/GetAllBooksQueryHandler.cs` | `feature/query1-sara` |
-| **Robledo** | Query 2 – Consultar libro por ID | `Application/Books/Queries/GetBookById/GetBookByIdQueryHandler.cs` | `feature/query2-robledo` |
-| **Tobón** | Query 3 – Consultar libros por categoría | `Application/Books/Queries/GetBooksByCategory/GetBooksByCategoryQueryHandler.cs` | `feature/query3-tobon` |
+| Integrante | Parte | Archivos que le corresponden |
+|-----------|-------|------------------------------|
+| **Alexander** | Base compartida + integración | `Domain/*`, `Infrastructure/*`, `Application/Common/*`, `WebApi/*`, migración inicial |
+| **Sara** | Query 1 – Consultar todos los libros | `Application/Books/Queries/GetAllBooks/GetAllBooksQueryHandler.cs` |
+| **Robledo** | Query 2 – Consultar libro por ID | `Application/Books/Queries/GetBookById/GetBookByIdQueryHandler.cs` |
+| **Tobón** | Query 3 – Consultar libros por categoría | `Application/Books/Queries/GetBooksByCategory/GetBooksByCategoryQueryHandler.cs` |
 
 ## Detalle por integrante
 
@@ -23,7 +23,7 @@ Monta el esqueleto que usa todo el equipo, para que los demás solo implementen 
 - **Application (común)**: abstracción `IApplicationDbContext` y registro de MediatR.
 - **Infrastructure**: `ApplicationDbContext`, configuraciones EF Core y **datos de ejemplo** (seed).
 - **WebApi**: `Program.cs`, `BooksController` (los 3 endpoints ya cableados a MediatR) y Swagger.
-- **Git/GitHub**: repositorio, `.gitignore`, ramas y la **migración inicial** (`InitialCreate`).
+- **Git/GitHub**: repositorio, `.gitignore` y la **migración inicial** (`InitialCreate`).
 > Detalle en [`Alex.md`](Alex.md).
 
 ### Sara — Query 1: Consultar todos los libros
@@ -56,6 +56,6 @@ HTTP  →  BooksController  →  MediatR (ISender.Send)  →  [TU Query]Handler 
 ## Orden recomendado
 
 1. **Alex** sube la base a GitHub y crea la migración inicial (`main` funcionando).
-2. Cada quien hace `git pull`, crea su rama y implementa **su** handler.
+2. Cada quien hace `git pull` sobre `main` e implementa **su** handler.
 3. Prueban su endpoint en Swagger.
-4. Pull Request a `main` y revisión entre compañeros.
+4. `git commit` y `git push` a `main` (cada quien toca un archivo distinto, sin conflictos).

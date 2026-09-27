@@ -40,11 +40,11 @@ public async Task<List<BookListDto>> Handle(GetBooksByCategoryQuery request, Can
 (El `using BibliotecaCatalogo.Application.Books.Queries.GetAllBooks;` para `BookListDto` ya está en el archivo.)
 
 ## Cómo probar
-1. `git checkout -b feature/query3-tobon`
+1. `git pull` para partir de la última versión de `main`.
 2. Implementa y ejecuta la API.
 3. En Swagger: `GET /api/books/category/2` → *El Hobbit* y *El Señor de los Anillos* (Fantasía).
 4. Commit y push:
    ```bash
    git commit -am "feat(books): Query 3 - consultar libros por categoría"
-   git push -u origin feature/query3-tobon
+   git push
    ```

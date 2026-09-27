@@ -41,11 +41,11 @@ public async Task<List<BookListDto>> Handle(GetAllBooksQuery request, Cancellati
 (Recuerda que arriba del archivo ya están los `using` de `Microsoft.EntityFrameworkCore` e `IApplicationDbContext`.)
 
 ## Cómo probar
-1. `git checkout -b feature/query1-sara`
+1. `git pull` para partir de la última versión de `main`.
 2. Implementa el método y ejecuta `dotnet run --project src/BibliotecaCatalogo.WebApi`.
 3. En Swagger, ejecuta `GET /api/books` → deben salir los 7 libros de ejemplo.
 4. Commit y push:
    ```bash
    git commit -am "feat(books): Query 1 - consultar todos los libros"
-   git push -u origin feature/query1-sara
+   git push
    ```

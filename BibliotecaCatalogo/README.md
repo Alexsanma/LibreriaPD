@@ -82,24 +82,15 @@ Ejemplos para probar los endpoints:
 - `GET /api/books/5` → *Clean Code*.
 - `GET /api/books/category/2` → libros de *Fantasía* (El Hobbit, El Señor de los Anillos).
 
-## Estado de las partes
-
-- [x] Base compartida (Alex): Domain, Infraestructura, host, controller, seed.
-- [ ] Query 1 – Todos los libros (Sara): `GetAllBooksQueryHandler`.
-- [ ] Query 2 – Libro por ID (Robledo): `GetBookByIdQueryHandler`.
-- [ ] Query 3 – Libros por categoría (Tobón): `GetBooksByCategoryQueryHandler`.
-
-Cada handler pendiente tiene un `// TODO` con los pasos y la consulta sugerida, y la solución
-de referencia en su archivo de `docs/`.
-
 ## Flujo de trabajo con Git
 
-Cada quien trabaja en su rama y abre Pull Request a `main`:
+Trabajamos directamente sobre `main`. Como cada quien toca un archivo distinto
+(su propio handler), **no hay conflictos** entre las partes:
+
 ```bash
-git checkout -b feature/query1-sara      # (o query2-robledo, query3-tobon)
+git pull
 # ...implementar tu handler...
 git add .
 git commit -m "feat(books): implementa Query 1 - consultar todos los libros"
-git push -u origin feature/query1-sara
+git push
 ```
-Como cada quien toca un archivo distinto (su handler), **no hay conflictos** entre las partes.
