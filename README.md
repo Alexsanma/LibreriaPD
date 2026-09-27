@@ -54,3 +54,10 @@ Se siembran 4 autores, 4 categorías y 7 libros. Algunos ejemplos para probar:
 - `GET /api/books` → los 7 libros
 - `GET /api/books/5` → *Clean Code*
 - `GET /api/books/category/2` → libros de Fantasía (*El Hobbit*, *El Señor de los Anillos*)
+
+## Integrantes
+
+- Sara Arciniegas Villa
+- Juan Pablo Robledo Urrego
+- Juan Pablo Vásquez Tobón
+- Alexander Sanmartín Arredondo
